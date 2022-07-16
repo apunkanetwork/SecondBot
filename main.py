@@ -32,7 +32,7 @@ async def start_cmd(bot, msg):
                  ]]
                 )
             )
-
+            return 
 
     await msg.reply_text("** If You Want To Know More Contact My Owner @Oxyver_Owner**")
 
