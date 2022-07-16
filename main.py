@@ -16,3 +16,8 @@ OXYVER = Client(
 @OXYVER.on_message(filters.command("start"))
 async def start_cmd(client, message):
     await message.reply_text("** If You Want To Know More Contact My Owner @Oxyver_Owner**")
+
+
+print("Bot Started")
+
+OXYVER.run()
