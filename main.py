@@ -17,15 +17,15 @@ force_channel = "Oxyver"
 
 
 @OXYVER.on_message(filters.command("start"))
-async def start_cmd(bot, msg):
+async def start_cmd(client, message):
     if force_channel:
         try:
-            user = await bot.get_chat_member(force_channel, msg.from_user.id)
+            user = await bot.get_chat_member(force_channel, message.from_user.id)
             if user.status == "kicked out":
-                await msg.reply_text("You Are Banned")
+                await message.reply_text("You Are Banned")
                 return
         except UserNotParticipant:
-            await msg.reply_text(
+            await message.reply_text(
                 text="You Are Not A Member Of My Channel",
                 reply_markup=InlineKeyboardMarkup( [[
                  InlineKeyboardButton("Join Channel 📣", url=f"t.me/{force_channel}")
@@ -34,7 +34,7 @@ async def start_cmd(bot, msg):
             )
             return 
 
-    await msg.reply_text("** If You Want To Know More Contact My Owner @Oxyver_Owner**")
+    await message.reply_text("** If You Want To Know More Contact My Owner @Oxyver_Owner**")
 
 
 print("Bot Started")
