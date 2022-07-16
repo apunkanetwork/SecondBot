@@ -17,7 +17,7 @@ force_channel = "Oxyver"
 
 
 @OXYVER.on_message(filters.command("start"))
-async def start_cmd(client, message):
+async def start_cmd(bot, message):
     if force_channel:
         try:
             user = await bot.get_chat_member(force_channel, message.from_user.id)
