@@ -34,7 +34,7 @@ async def start_cmd(bot, message):
             )
             return 
 
-    await message.reply_text(text =f"`If You Want To Know More Contact My Owner @Oxyver_Owner`")
+    await message.reply_text(text =f"If You Want To Know More Contact My Owner @Oxyver_Owner")
 
 
 print("Bot Started")
